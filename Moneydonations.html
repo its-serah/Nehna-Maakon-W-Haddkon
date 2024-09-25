@@ -18,18 +18,43 @@
 
         /* Header styling */
         header {
-            background-color: #4CAF50;
+            background-color: #4C91B3; /* Changed to blue */
             color: white;
             padding: 20px;
             width: 100%;
             text-align: center;
             margin-bottom: 20px;
             box-sizing: border-box;
+            position: relative;
         }
 
         header h1 {
             margin: 0;
             font-size: 1.8em;
+        }
+
+        /* Back arrow styling */
+        .back-arrow {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-arrow:hover {
+            background-color: #d9d9d9;
+        }
+
+        .back-arrow img {
+            width: 16px;
+            height: 16px;
         }
 
         /* Box container styling */
@@ -86,6 +111,15 @@
             .donation-box p {
                 font-size: 0.9em;
             }
+
+            .back-arrow {
+                padding: 4px 8px;
+            }
+
+            .back-arrow img {
+                width: 14px;
+                height: 14px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -100,15 +134,32 @@
             .donation-box p {
                 font-size: 0.8em;
             }
+
+            .back-arrow img {
+                width: 12px;
+                height: 12px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <button class="back-arrow" onclick="window.location.href='index.html'">
+            <img src="https://img.icons8.com/ios-filled/50/000000/left.png" alt="Back">
+        </button>
         <h1>Money Donations | التبرعات المالية</h1>
     </header>
 
     <!-- Donation Boxes -->
+
+    <div class="donation-box">
+        <h2>Money Donations needed</h2>
+        <p>Contact Manal she will send details of WISH Accounts to send money to</p>
+        <p>Phone: 03805309</p>
+        <p> Resource : @lighterstyle on instagram </p>
+    </div>
+
+
     <div class="donation-box">
         <h2>For Beirut, Aramoun, Bchamoun, Shweifet</h2>
         <p><a href="https://www.instagram.com/sarahhammoudd/" target="_blank">@sarahhammoudd</a></p>
@@ -122,20 +173,9 @@
     </div>
 
     <div class="donation-box">
-        <h2>For West Bekaa / Rachaya</h2>
-        <p>Whish Account: +961 76 898 811</p>
-        <p><a href="https://www.instagram.com/yaroovlogs/" target="_blank">@yaroovlogs</a></p>
-    </div>
-
-    <div class="donation-box">
         <h2>@banin.lb Beirut School Shelters</h2>
-        <p>Contact: +961 76 812 246</p>
+        <p>Contact: +961 81 313 319</p>
         <p><a href="https://www.instagram.com/banin.lb" target="_blank">Instagram Profile</a></p>
-    </div>
-
-    <div class="donation-box">
-        <h2>For In-Kind Donations in Beirut</h2>
-        <p>Contact Ahmad: +961 81 964 882</p>
     </div>
 
     <div class="donation-box">
@@ -152,11 +192,7 @@
         <p>IBAN: LB06 0056 0000 0000 0065 7334 0095</p>
     </div>
 
-    <div class="donation-box">
-        <h2>Money Donations needed</h2>
-        <p>Contact Manal she will send details of WISH Accounts to send money to</p>
-        <p>Phone: 03805309</p>
-    </div>
+   
 
     <div class="donation-box">
         <h2>For Further Inquiries or Assistance</h2>
@@ -180,6 +216,15 @@
             <li><a href="https://gofund.me/d8d3199a" target="_blank">Immediate Support for Lebanon</a></li>
             <li><a href="https://gofund.me/f39a0f65" target="_blank">Lebanon Humanitarian Support Fund</a></li>
         </ul>
+    </div>
+
+    <div class="donation-box">
+        <h2>Other Accounts and Contacts</h2>
+        <p><a href="https://www.instagram.com/foodandmorebyfarah/" target="_blank">@foodandmorebyfarah</a> on Instagram: +03 839 887</p>
+        <p>Donate by Wish Money: +961 70 00 88 61 or +961 81 392 067</p>
+        <p><a href="https://www.supportlrc.app/" target="_blank">Support LRC Website</a></p>
+        <p>Wish Account: +961 81 903 490</p>
+        <p>Wish Account: +961 81 750 634</p>
     </div>
 
     <div class="donation-box">

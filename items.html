@@ -18,13 +18,14 @@
 
         /* Header styling */
         header {
-            background-color: #4CAF50;
+            background-color: #4C91B3; /* Blue header */
             color: white;
             padding: 20px;
             width: 100%;
             text-align: center;
             margin-bottom: 20px;
             box-sizing: border-box;
+            position: relative;
         }
 
         header h1 {
@@ -34,6 +35,31 @@
 
         header p {
             font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        /* Back arrow styling */
+        .back-arrow {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-arrow:hover {
+            background-color: #d9d9d9;
+        }
+
+        .back-arrow img {
+            width: 16px;
+            height: 16px;
         }
 
         /* Box container styling */
@@ -50,7 +76,7 @@
         }
 
         .volunteer-box h2 {
-            color: #4CAF50;
+            color: #4C91B3; /* Blue color for headers */
             font-size: 1.2em;
             margin-top: 0;
         }
@@ -90,6 +116,15 @@
             .volunteer-box p {
                 font-size: 0.9em;
             }
+
+            .back-arrow {
+                padding: 4px 8px;
+            }
+
+            .back-arrow img {
+                width: 14px;
+                height: 14px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -104,11 +139,19 @@
             .volunteer-box p {
                 font-size: 0.8em;
             }
+
+            .back-arrow img {
+                width: 12px;
+                height: 12px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <button class="back-arrow" onclick="window.location.href='index.html'">
+            <img src="https://img.icons8.com/ios-filled/50/000000/left.png" alt="Back">
+        </button>
         <h1>Volunteers Needed & Items Needed | المتطوعين المطلوبين والعناصر المطلوبة</h1>
         <p>All sources are trusted; you can also visit schools near you that are listed on the Schools and Shelters page.</p>
         <p>جميع المصادر موثوقة؛ يمكنك أيضًا زيارة المدارس القريبة منك المدرجة في صفحة المدارس والملاجئ.</p>
@@ -116,6 +159,14 @@
 
     <!-- Volunteers and Items Needed -->
      <!-- New section for the Lebanon campaign -->
+
+     <div class="volunteer-box">
+        <h2>14. Help Us Support Families in Need</h2>
+        <p>Many families have been forced to flee their homes, seeking refuge in schools and temporary shelters. These individuals, including children and the elderly, urgently need basic necessities such as water, food, mattresses, and hygiene kits.</p>
+        <p>Your generous donations will provide immediate relief to those in need. Every contribution, no matter how small, will make a significant difference.</p>
+        <p><strong>For Donations, DM us on Instagram:</strong> <a href="https://www.instagram.com/feedtheneed.lb?igsh=bGU1eHFwaWtuajhr" target="_blank">@feedtheneed.lb</a></p>
+    </div>
+    
 <div class="volunteer-box">
     <h2>Lebanon is From Us and We are From It / لبنان منا و نحن منها</h2>
     <p>The Amal Al-Ajyal team launches a campaign from north to south to support our people displaced from the south and deliver it to Beirut in cooperation with the Space Association. We seek to collect financial and in-kind assistance, including:</p>
@@ -227,30 +278,31 @@
     </div>
 
     <div class="volunteer-box">
-        <h2>2. Donate Now!! / تبرع الآن!!</h2>
-        <p>Water & Food</p>
-        <p>Kleenex & Toilet papers</p>
-        <p>Cleaning supplies & Products</p>
-        <p>Diapers for elderlies & newborns</p>
-        <p>Milk formula</p>
-        <p>Medication</p>
-        <p>Sanitary products</p>
-        <p>Mattresses & Pillows</p>
-        <p>Blankets</p>
-        <p><strong>Location:</strong> Quality Inn, Tripoli Lebanon</p>
-        <p><strong>Drop-off donations in Tripoli!</strong></p>
+        <h2>2. Support Wata Al-Msaytbeh School / دعم مدرسة وطى المصيطبة</h2>
+        <p>The school is close to Al-Zuhairi station. Let's all help as much as we can. People who arrived at Wata Al-Msaytbeh School are missing many things. There are about 150 people, including two with special needs. They urgently need:</p>
+        <ul>
+            <li>Brushes</li>
+            <li>Quilts</li>
+            <li>Towels</li>
+            <li>Pampers</li>
+            <li>Water</li>
+            <li>Soap and shampoo</li>
+            <li>Or anything else you can provide</li>
+        </ul>
     
-        <p>الماء والغذاء</p>
-        <p>كلينيكس وورق التواليت</p>
-        <p>مستلزمات ومنتجات التنظيف</p>
-        <p>حفاضات لكبار السن وحديثي الولادة</p>
-        <p>صيغة الحليب</p>
-        <p>دواء</p>
-        <p>منتجات صحية</p>
-        <p>المراتب والوسائد</p>
-        <p>البطانيات</p>
-        <p><strong>كواليتي إن طرابلس لبنان</strong></p>
-        <p><strong>في طرابلس! قم بإسقاط التبرعات</strong></p>
+        <p>المدرسة قريبة من محطة الزهيري</p>
+        <p>خلينا كلنا نساعد قد ما فينا</p>
+        <p>الناس يللي وصلت على مدرسة وطى المصيطبة ناقصهم كثير اشياء</p>
+        <p>هني حوالي ١٥٠ شخص وفي شخصين من ذوي الحاجات الخاصة</p>
+        <ul>
+            <li>فرش</li>
+            <li>لحف</li>
+            <li>مناشف</li>
+            <li>Pampers</li>
+            <li>ماي</li>
+            <li>صابون وشامبو</li>
+            <li>او اي شي بتقدرو عليه</li>
+        </ul>
     </div>
     
 
@@ -341,10 +393,5 @@
         <p>Contact: 03 004204, 81 935932</p>
     </div>
 
-    <div class="volunteer-box">
-        <h2>14. Make a Difference with Your Donation</h2>
-        <p>Electric Bed, Food, Walkers, Mattresses, Medicine, Diapers, Crutches, Medical Collars.</p>
-        <p>Contact: +961 70 615 125 (Hamra), +961 81 074 796 (Saida), +961 3 828 921 (Nabatieh)</p>
-    </div>
 </body>
 </html>
