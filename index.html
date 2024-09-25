@@ -7,26 +7,23 @@
     <style>
         /* General body styling */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5fafd; /* Soft light blue background */
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            color: #333;
         }
 
         /* Header styling */
         header {
-            background-color: #4c91b3; /* Softer blue */
+            background-color: #4CAF50;
             padding: 20px;
-            color: #fff;
+            color: white;
             width: 100%;
             box-sizing: border-box;
-            text-align: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
@@ -34,82 +31,81 @@
             font-size: 1.8em;
         }
 
-        header .description {
-            background-color: #fff;
+        .description {
+            background-color: #ffffff;
             color: #333;
             padding: 15px;
             margin: 10px auto;
-            max-width: 900px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
-            line-height: 1.6;
         }
 
         /* Trusted info box styling */
         .trusted-info {
-            background-color: #ffeaa7; /* Soft yellow */
-            color: #333;
+            background-color: #ff4d4d; /* Red background */
+            color: white;
             padding: 15px;
             margin: 15px auto;
-            max-width: 900px;
-            border-radius: 8px;
+            max-width: 800px;
+            border-radius: 5px;
             font-weight: bold;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            line-height: 1.6;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
+
+
 
         /* Buttons container */
         .buttons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
             margin: 20px 0;
-            padding: 0 10px;
+            gap: 10px;
             width: 100%;
-            max-width: 900px;
+            padding: 0 10px;
+            box-sizing: border-box;
         }
 
         /* Button styling */
         .buttons button {
-            padding: 10px 15px;
-            background-color: #4c91b3; /* Softer blue */
+            padding: 15px 20px;
+            background-color: #008CBA;
             color: white;
             border: none;
             cursor: pointer;
             border-radius: 5px;
             font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            width: auto;
-            flex: 1 1 200px; /* Ensures responsiveness across devices */
-            min-width: 120px;
+            margin: 5px;
+            flex: 1 1 auto;
+            max-width: 200px;
+            transition: background-color 0.3s;
         }
 
         .buttons button:hover {
-            background-color: #3b7289; /* Darker blue on hover */
+            background-color: #005f7f;
         }
 
         .buttons button:last-child {
-            background-color: #f39c12; /* Orange for the special button */
+            background-color: #f39c12;
         }
 
         .buttons button:last-child:hover {
-            background-color: #e67e22; /* Slightly darker orange on hover */
+            background-color: #e67e22;
         }
 
         /* Footer styling */
         footer {
-            background-color: #f7f7f7;
-            padding: 15px 20px;
+            background-color: #f1f1f1;
+            padding: 10px 20px;
             width: 100%;
             box-sizing: border-box;
-            color: #555;
-            text-align: center;
             margin-top: auto;
             position: relative;
-            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            text-align: center;
         }
 
         footer p {
@@ -118,9 +114,8 @@
         }
 
         footer a {
-            color: #4c91b3;
+            color: #008CBA;
             text-decoration: none;
-            font-weight: bold;
         }
 
         footer a:hover {
@@ -130,22 +125,24 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.4em;
-            }
-
-            .buttons {
-                flex-direction: column; /* Stack buttons vertically on smaller screens */
+                font-size: 1.5em;
             }
 
             .buttons button {
                 font-size: 14px;
-                padding: 8px 10px;
+                padding: 10px 15px;
             }
 
             .description, .trusted-info {
                 padding: 10px;
                 font-size: 14px;
-                margin: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .description, .trusted-info {
+                font-size: 13px;
+                padding: 8px;
             }
 
             footer p {
@@ -153,33 +150,39 @@
             }
         }
 
-        @media (max-width: 480px) {
-            header .description, .trusted-info {
-                font-size: 13px;
-                padding: 8px;
-                text-align: center; /* Ensures content is centered */
-            }
-
-            footer p {
-                font-size: 0.7em;
-            }
+        .visit-counter {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
+
     </style>
 </head>
 <body>
     <header>
         <h1>Nehna Maakon W Haddkon | نحنا معكن وحدّكن</h1>
         <p class="description">
-            "Nehna Maakon W Haddkon" is a platform dedicated to supporting displaced individuals and communities in Lebanon. Our mission is to provide a central hub for resources, assistance, and vital information, ensuring that those in need can easily access shelters, food, medical support, mental health services, and volunteer opportunities. 
-            <br><br>
-            موقع "نحنا معكن وحدّكن" هو منصة مخصصة لدعم الأفراد والمجتمعات النازحة في لبنان. نهدف من خلال هذا الموقع إلى توفير مركز يجمع الموارد والمساعدات والمعلومات الهامة، لضمان وصول المحتاجين بسهولة إلى الملاجئ والطعام والدعم الطبي والخدمات النفسية وفرص التطوع.
+            "Nehna Maakon W Haddkon" is a platform dedicated to supporting displaced individuals and communities in Lebanon. Our mission is to provide a central hub for resources, assistance, and vital information, ensuring that those in need can easily access shelters, food, medical support, mental health services, and volunteer opportunities. We aim to connect those offering help with those seeking it, fostering a sense of solidarity and togetherness in these challenging times. Whether you're looking to volunteer, donate, or find support, we're here by your side, always.
+        </p>
+        <p class="description">
+            موقع "نحنا معكن وحدّكن" هو منصة مخصصة لدعم الأفراد والمجتمعات النازحة في لبنان. نهدف من خلال هذا الموقع إلى توفير مركز يجمع الموارد والمساعدات والمعلومات الهامة، لضمان وصول المحتاجين بسهولة إلى الملاجئ والطعام والدعم الطبي والخدمات النفسية وفرص التطوع. نعمل على ربط الأشخاص الذين يرغبون بتقديم المساعدة مع الذين يحتاجون إليها، لتعزيز روح التضامن والتكاتف في هذه الأوقات الصعبة. سواء كنت ترغب في التطوع، التبرع، أو الحصول على الدعم، نحن هنا بجانبك دائمًا.
         </p>
     </header>
 
+    <!-- Visit Counter -->
+    <div class="visit-counter">
+        Visitor Count: <span id="counter"></span>
+    </div>
+
     <div class="trusted-info">
-        All information provided here is verified. We update it regularly to stay relevant. Click on the orange button below to share or update any information.
+        Everything here is trusted, and we are constantly updating and adding information. If you have any new information to share or wish to help us keep this platform updated, click on the orange button below and fill out the Google Form. Your contributions make a difference!
         <br><br>
-        جميع المعلومات المقدمة هنا موثوقة، ونحن نقوم بتحديثها بانتظام. إذا كنت ترغب في مشاركة أو تحديث أي معلومات، انقر على الزر البرتقالي أدناه.
+        كل شيء هنا موثوق، ونحن نقوم بالتحديث والإضافة باستمرار. إذا كان لديك أي معلومات جديدة ترغب في مشاركتها أو ترغب في مساعدتنا في تحديث هذه المنصة، انقر على الزر البرتقالي أدناه واملأ نموذج . مساهماتك تحدث فرقًا!
     </div>
 
     <!-- Buttons to navigate to other pages -->
@@ -188,17 +191,27 @@
         <button onclick="location.href='items.html'">Items & Supplies / المواد والتجهيزات</button>
         <button onclick="location.href='schools.html'">Schools & Shelters / المدارس والملاجئ</button>
         <button onclick="location.href='Moneydonations.html'" target="_blank">Money Donations / التبرعات المالية</button>
-        <button onclick="window.open('https://forms.gle/8N71FG5Uff7JJbYs9', '_blank')">Add Information / أضف معلومات</button>
+        <button onclick="window.open('https://forms.gle/8N71FG5Uff7JJbYs9', '_blank')">Add Information to the Website / إضافة معلومات إلى الموقع</button>
     </div>
 
     <footer>
-        <p>Website Built by <a href="https://www.linkedin.com/in/sarahelrashidi/" target="_blank">Sarah Rashidi</a>. If you encounter any issues or wish to contribute, feel free to contact us.</p>
+        <p> Website Built by @Sarah Rashidi.In case of any issues or if you'd like to volunteer and help add information to the website, don't hesitate to reach out.</p>
+        <p>Contact us on LinkedIn  <a href="https://www.linkedin.com/in/sarahelrashidi/" target="_blank">Sarah Rashidi</a> or Reach out to  Instagram: <a href="https://www.instagram.com/duatarchi?igsh=dDB1Zmo2emtlbndp" target="_blank">Dua Tarchi</a> or Linkedin: <a href="https://www.linkedin.com/in/rama-ghalayini-327701325" target="_blank">Rama Ghalayini</a></p>
         <p>© 2024 All rights reserved.</p>
     </footer>
+
+    <script>
+       
+        if (localStorage.getItem('page_view')) {
+          
+            localStorage.setItem('page_view', Number(localStorage.getItem('page_view')) + 1);
+        } else {
+        
+            localStorage.setItem('page_view', 1);
+        }
+
+
+        document.getElementById('counter').textContent = localStorage.getItem('page_view');
+    </script>
 </body>
 </html>
-
-
-
-
-
