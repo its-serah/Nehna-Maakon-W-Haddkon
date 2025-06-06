@@ -4,163 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteers Needed & Items Needed | المتطوعين المطلوبين والعناصر المطلوبة</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* General body styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Header styling */
-        header {
-            background-color: #4C91B3; /* Blue header */
-            color: white;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            position: relative;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-
-        header p {
-            font-size: 0.9em;
-            margin: 5px 0;
-        }
-
-        /* Back arrow styling */
-        .back-arrow {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 50%;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .back-arrow:hover {
-            background-color: #d9d9d9;
-        }
-
-        .back-arrow img {
-            width: 16px;
-            height: 16px;
-        }
-
-        /* Box container styling */
+        /* Page-specific styles */
         .volunteer-box {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 15px auto;
             width: 100%;
-            max-width: 600px;
-            box-sizing: border-box;
+            max-width: 800px;
+            box-shadow: var(--box-shadow);
         }
 
         .volunteer-box h2 {
-            color: #4C91B3; /* Blue color for headers */
-            font-size: 1.2em;
-            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
         }
 
-        .volunteer-box p {
-            margin: 5px 0;
-            line-height: 1.5;
+        .volunteer-box p, .volunteer-box ul {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .volunteer-box ul {
+            padding-left: 25px;
         }
 
         .volunteer-box a {
-            color: #008CBA;
+            color: var(--primary-color);
             text-decoration: none;
+            transition: color 0.3s;
         }
 
         .volunteer-box a:hover {
+            color: #0d47a1;
             text-decoration: underline;
-        }
-
-        /* Responsive styling */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            header h1 {
-                font-size: 1.3em;
-            }
-
-            .volunteer-box {
-                padding: 10px;
-            }
-
-            .volunteer-box h2 {
-                font-size: 1.1em;
-            }
-
-            .volunteer-box p {
-                font-size: 0.9em;
-            }
-
-            .back-arrow {
-                padding: 4px 8px;
-            }
-
-            .back-arrow img {
-                width: 14px;
-                height: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.1em;
-            }
-
-            .volunteer-box {
-                padding: 8px;
-            }
-
-            .volunteer-box p {
-                font-size: 0.8em;
-            }
-
-            .back-arrow img {
-                width: 12px;
-                height: 12px;
-            }
         }
     </style>
 </head>
 <body>
+    <div class="discontinuation-notice">
+        <p><strong>IMPORTANT NOTICE:</strong> This project has been discontinued. It was created to help connect people after the war in Lebanon by offering food, shelter, and other essential services. The information on this site is preserved for historical purposes but may no longer be current.</p>
+        <p><strong>إشعار هام:</strong> تم إيقاف هذا المشروع. تم إنشاؤه للمساعدة في ربط الناس بعد الحرب في لبنان من خلال تقديم الغذاء والمأوى والخدمات الأساسية الأخرى. تم الاحتفاظ بالمعلومات الموجودة على هذا الموقع لأغراض تاريخية ولكنها قد لا تكون حديثة.</p>
+    </div>
+
     <header>
         <button class="back-arrow" onclick="window.location.href='index.html'">
             <img src="https://img.icons8.com/ios-filled/50/000000/left.png" alt="Back">
         </button>
         <h1>Volunteers Needed & Items Needed | المتطوعين المطلوبين والعناصر المطلوبة</h1>
-        <p>All sources are trusted; you can also visit schools near you that are listed on the Schools and Shelters page.</p>
-        <p>جميع المصادر موثوقة؛ يمكنك أيضًا زيارة المدارس القريبة منك المدرجة في صفحة المدارس والملاجئ.</p>
+        <div class="description">
+            <p>All sources are trusted; you can also visit schools near you that are listed on the Schools and Shelters page.</p>
+            <p>جميع المصادر موثوقة؛ يمكنك أيضًا زيارة المدارس القريبة منك المدرجة في صفحة المدارس والملاجئ.</p>
+        </div>
     </header>
 
     <!-- Volunteers and Items Needed -->
-     <!-- New section for the Lebanon campaign -->
+    <!-- New section for the Lebanon campaign -->
       
-     <div class="volunteer-box">
+    <div class="volunteer-box">
         <h2>Support Needed for Dr. Hassan Saab Official Secondary School</h2>
         <p>We need mattresses and medicines if possible. Please help.</p>
         <p><strong>ثانوية د. حسن صعب الرسمية المختلطة</strong></p>
@@ -172,7 +79,7 @@
         <p>Pillows: $4/unit</p>
         <p>Blankets: $8/unit</p>
         <p>Pick-up is ideally from Baabda. We can offer delivery depending on your location, but please note it is not guaranteed.</p>
-        <p>If you’d like to place an order, kindly notify us in advance so we can schedule a provision time.</p>
+        <p>If you'd like to place an order, kindly notify us in advance so we can schedule a provision time.</p>
         <p><strong>Contact:</strong> Maria Mouzannar +961 76 043 820 for information</p>
         <p>Ralph Mouzannar +961 03 490 935 for orders</p>
         <p><strong>وسائد وبطانيات للمنظمات غير الحكومية والمتطوعين</strong></p>
@@ -186,7 +93,7 @@
 
     <div class="volunteer-box">
         <h2>In-Kind Donations to Bring Joy</h2>
-        <p>It is a request, not a demand. For those who wish to bring joy to a mother’s heart or draw a smile on a child’s face, donations can be made by contacting the following numbers:</p>
+        <p>It is a request, not a demand. For those who wish to bring joy to a mother's heart or draw a smile on a child's face, donations can be made by contacting the following numbers:</p>
         
         <p><strong>Nahr al-Bared:</strong> 70 664 460</p>
         <p><strong>Al-Beddawi:</strong><br>
@@ -214,7 +121,7 @@
     
     
 
-     <div class="volunteer-box">
+    <div class="volunteer-box">
         <h2> Help Us Support Families in Need</h2>
         <p>Many families have been forced to flee their homes, seeking refuge in schools and temporary shelters. These individuals, including children and the elderly, urgently need basic necessities such as water, food, mattresses, and hygiene kits.</p>
         <p>Your generous donations will provide immediate relief to those in need. Every contribution, no matter how small, will make a significant difference.</p>
@@ -263,6 +170,7 @@
         <p>يتبرع فيهم من خلال جمعية زيتون للتنمية الاجتماعية و سيتم توزيعهم للنازحين</p>
         <p><strong>Contact:</strong> 76 589 097</p>
     </div>
+
     <div class="volunteer-box">
         <h2>Support Donations for Schools</h2>
         <p>We are collecting donations to help those in need, and all items will be distributed among schools. Whether it's food, clothing, or other necessities, your contribution can make a big difference.</p>
@@ -277,9 +185,10 @@
         <p>إذا كنت ترغب في إرسال أموال عبر Wish، يرجى الاتصال على 70613644</p>
         <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sabine_yamout?igsh=ZGt3eDVibWhoeHZt" target="_blank">@Sabine_yamout</a></p>
     </div>
+
     <div class="volunteer-box">
         <h2>Support Our Hygiene Donation Packages</h2>
-        <p>We're creating donation packages of hygiene products to support those in need. Here’s the breakdown of items you can contribute:</p>
+        <p>We're creating donation packages of hygiene products to support those in need. Here's the breakdown of items you can contribute:</p>
         <ul>
             <li>Period pads: $1 per pack</li>
             <li>Diapers for children: $5 per pack</li>
@@ -325,12 +234,14 @@
         <p><strong>فتحت باب التبرع و الاشخاص جدا موثوقين، لتأمين الحاجات الأساسية للاهالي و الإخوة النازحين</strong></p>
         <p><strong>Instagram:</strong> <a href="https://www.instagram.com/lebanese_spotlight?igsh=bXp4aHVzM2s4NmQ3" target="_blank">@lebanese_spotlight</a></p>
     </div>
+
     <div class="volunteer-box">
         <h2>Urgent Help Needed for a New Mother</h2>
         <p>A woman who gave birth two days ago urgently needs milk and diapers. We are looking for help with supplies or monetary donations.</p>
         <p><strong>إمرأة صرلا يومين مولدة بدها حليب، حفاضات، اي حدا بيقدر يساعد ب المستلزمات او مبلغ</strong></p>
         <p>Location: Zoqaq El-Blat Public School (في مدرسة زقاق البلاط الرسمية)</p>
     </div>
+
     <div class="volunteer-box">
         <h2>Support Jal El Dib Official High School</h2>
         <p>Jal El Dib Official High School is in need of all the essential supplies. If you are in Beirut, please deliver aid to Gemmayzeh.</p>
@@ -365,100 +276,98 @@
         <p><strong>Instagram:</strong> <a href="https://www.instagram.com/thelawyard?igsh=cHNzbzQ2dXZ1bTE0" target="_blank">@thelawyard</a></p>
     </div>
     
-<div class="volunteer-box">
-    <h2>Lebanon is From Us and We are From It / لبنان منا و نحن منها</h2>
-    <p>The Amal Al-Ajyal team launches a campaign from north to south to support our people displaced from the south and deliver it to Beirut in cooperation with the Space Association. We seek to collect financial and in-kind assistance, including:</p>
-    <ul>
-        <li>Foodstuffs</li>
-        <li>Drinking water</li>
-        <li>Clothes and covers</li>
-        <li>Medicines</li>
-        <li>Milk and baby supplies</li>
-        <li>First aid supplies</li>
-    </ul>
-    <p>To donate, contact the following numbers:</p>
-    <ul>
-        <li><strong>Al-Badawi Camp:</strong> Asmaa Al-Saadi 81567253, Muhammad Al-Jamal 79141911</li>
-        <li><strong>Mount Beddawi:</strong> Jodi Ayyash 03918164, Saja Jodi 81382756</li>
-        <li><strong>Nahr al-Bared camp:</strong> Zakaria Deeb 70682181, Israa Al-Saadi 03179452</li>
-    </ul>
-</div>
+    <div class="volunteer-box">
+        <h2>Lebanon is From Us and We are From It / لبنان منا و نحن منها</h2>
+        <p>The Amal Al-Ajyal team launches a campaign from north to south to support our people displaced from the south and deliver it to Beirut in cooperation with the Space Association. We seek to collect financial and in-kind assistance, including:</p>
+        <ul>
+            <li>Foodstuffs</li>
+            <li>Drinking water</li>
+            <li>Clothes and covers</li>
+            <li>Medicines</li>
+            <li>Milk and baby supplies</li>
+            <li>First aid supplies</li>
+        </ul>
+        <p>To donate, contact the following numbers:</p>
+        <ul>
+            <li><strong>Al-Badawi Camp:</strong> Asmaa Al-Saadi 81567253, Muhammad Al-Jamal 79141911</li>
+            <li><strong>Mount Beddawi:</strong> Jodi Ayyash 03918164, Saja Jodi 81382756</li>
+            <li><strong>Nahr al-Bared camp:</strong> Zakaria Deeb 70682181, Israa Al-Saadi 03179452</li>
+        </ul>
+    </div>
 
-<!-- Medication needed section -->
-<div class="volunteer-box">
-    <h2>Medication Needed (Pick-up from Beirut and Aramoun) / الأدوية المطلوبة (الاستلام من بيروت وعرمون)</h2>
-    <p>Contact Numbers:</p>
-    <ul>
-        <li>+961 81 747 790</li>
-        <li>+961 70 859 103</li>
-    </ul>
-    <p>The following medications are urgently needed:</p>
-    <ul>
-        <li>Aspicot 100mg 30</li>
-        <li>Concor 5mg 30</li>
-        <li>Corvasal 2mg 90</li>
-        <li>Omezol Benta 20mg 30</li>
-        <li>Symbicort 320/9mcg 60</li>
-        <li>Tulip 20 mg 30</li>
-        <li>Vastarel 25mg 60</li>
-        <li>Ventoline 100 mcg/dose 200</li>
-        <li>Cotabuvan 160/12.5 30</li>
-        <li>Levetiracetam Biogaran 250mg 60</li>
-        <li>Sagimet 50mg/1000mg 60</li>
-        <li>Tanakan 40 mg 90</li>
-        <li>Betaserc 16mg 60</li>
-        <li>Nexium 40 mg</li>
-        <li>Prostafine</li>
-        <li>Diameril</li>
-        <li>Novartis 50 mg/1000 mg</li>
-        <li>Goserline (Zoladex)</li>
-        <li>Paramax Joint</li>
-        <li>Un-alfa</li>
-        <li>Vernofer</li>
-        <li>One-Asian</li>
-        <li>Med Folic Acid</li>
-        <li>Liponorm Atorvastating 10 mg</li>
-        <li>Kepcitam 500 mg</li>
-        <li>Becozyme</li>
-        <li>One Alpha 0.5 mcg</li>
-        <li>Enterio</li>
-        <li>Renagel</li>
-        <li>Abiten</li>
-        <li>Trajenta</li>
-<li>Renvela</li>
-<li>Burinex</li>
-<li>Avenzor Furosemide 500</li>
-<li>Empaver 10</li>
-<li>Lanoxin</li>
-<li>Fendsop lidose 160 mg</li>
-<li>Glucophage Norgrel</li>
-<li>Atrovastin 20</li>
-<li>Cardio Valsartan</li>
-<li>Apirax</li>
-<li>Uni Lasix</li>
-<li>Benta-d</li>
-<li>Gabrika 75</li>
-<li>Ostrong</li>
-<li>Spasmo-digestin</li>
-<li>Tanakan</li>
-<li>Ulcesep</li>
-<li>Vertinex</li>
-<li>Imatinib Koanaa 400mg</li>
-<li>Azacol 400mg</li>
-<li>Panadol</li>
-<li>Glucaphage XR1000</li>
-<li>Nabilat 5 mL</li>
-<li>Amlore 5mL</li>
-<li>Atrovastatin 40</li>
-<li>Ambrazol 20</li>
-<li>Musayyel Aspigot 81</li>
-<li>Himeyet me3de</li>
-<li>Folic acid</li>
-<li>Magnesium</li>
-
-    </ul>
-</div>
-
+    <!-- Medication needed section -->
+    <div class="volunteer-box">
+        <h2>Medication Needed (Pick-up from Beirut and Aramoun) / الأدوية المطلوبة (الاستلام من بيروت وعرمون)</h2>
+        <p>Contact Numbers:</p>
+        <ul>
+            <li>+961 81 747 790</li>
+            <li>+961 70 859 103</li>
+        </ul>
+        <p>The following medications are urgently needed:</p>
+        <ul>
+            <li>Aspicot 100mg 30</li>
+            <li>Concor 5mg 30</li>
+            <li>Corvasal 2mg 90</li>
+            <li>Omezol Benta 20mg 30</li>
+            <li>Symbicort 320/9mcg 60</li>
+            <li>Tulip 20 mg 30</li>
+            <li>Vastarel 25mg 60</li>
+            <li>Ventoline 100 mcg/dose 200</li>
+            <li>Cotabuvan 160/12.5 30</li>
+            <li>Levetiracetam Biogaran 250mg 60</li>
+            <li>Sagimet 50mg/1000mg 60</li>
+            <li>Tanakan 40 mg 90</li>
+            <li>Betaserc 16mg 60</li>
+            <li>Nexium 40 mg</li>
+            <li>Prostafine</li>
+            <li>Diameril</li>
+            <li>Novartis 50 mg/1000 mg</li>
+            <li>Goserline (Zoladex)</li>
+            <li>Paramax Joint</li>
+            <li>Un-alfa</li>
+            <li>Vernofer</li>
+            <li>One-Asian</li>
+            <li>Med Folic Acid</li>
+            <li>Liponorm Atorvastating 10 mg</li>
+            <li>Kepcitam 500 mg</li>
+            <li>Becozyme</li>
+            <li>One Alpha 0.5 mcg</li>
+            <li>Enterio</li>
+            <li>Renagel</li>
+            <li>Abiten</li>
+            <li>Trajenta</li>
+            <li>Renvela</li>
+            <li>Burinex</li>
+            <li>Avenzor Furosemide 500</li>
+            <li>Empaver 10</li>
+            <li>Lanoxin</li>
+            <li>Fendsop lidose 160 mg</li>
+            <li>Glucophage Norgrel</li>
+            <li>Atrovastin 20</li>
+            <li>Cardio Valsartan</li>
+            <li>Apirax</li>
+            <li>Uni Lasix</li>
+            <li>Benta-d</li>
+            <li>Gabrika 75</li>
+            <li>Ostrong</li>
+            <li>Spasmo-digestin</li>
+            <li>Tanakan</li>
+            <li>Ulcesep</li>
+            <li>Vertinex</li>
+            <li>Imatinib Koanaa 400mg</li>
+            <li>Azacol 400mg</li>
+            <li>Panadol</li>
+            <li>Glucaphage XR1000</li>
+            <li>Nabilat 5 mL</li>
+            <li>Amlore 5mL</li>
+            <li>Atrovastatin 40</li>
+            <li>Ambrazol 20</li>
+            <li>Musayyel Aspigot 81</li>
+            <li>Himeyet me3de</li>
+            <li>Folic acid</li>
+            <li>Magnesium</li>
+        </ul>
+    </div>
 
     <div class="volunteer-box">
         <h2> Haigazian University / جامعة هايكازيان</h2>
@@ -549,5 +458,10 @@
         <p>Contact: 03 004204, 81 935932</p>
     </div>
 
+    <footer>
+        <p>Website Built by @Sarah Rashidi. In case of any issues or if you'd like to volunteer and help add information to the website, don't hesitate to reach out.</p>
+        <p>Contact us on LinkedIn <a href="https://www.linkedin.com/in/sarahelrashidi/" target="_blank">Sarah Rashidi</a></p>
+        <p>© 2024 All rights reserved.</p>
+    </footer>
 </body>
 </html>
