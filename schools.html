@@ -4,141 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schools and Shelters | المدارس والملاجئ</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* General body styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Header styling */
-        header {
-            background-color: #4C91B3; /* Changed to blue */
-            color: white;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            position: relative;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-
-        /* Back arrow styling */
-        .back-arrow {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 50%;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .back-arrow:hover {
-            background-color: #d9d9d9;
-        }
-
-        .back-arrow img {
-            width: 16px;
-            height: 16px;
-        }
-
-        /* Box container styling */
+        /* Page-specific styles */
         .school-box {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 15px auto;
             width: 100%;
-            max-width: 600px;
-            box-sizing: border-box;
+            max-width: 800px;
+            box-shadow: var(--box-shadow);
         }
 
         .school-box h2 {
-            color: #4C91B3; /* Changed to blue */
-            font-size: 1.2em;
-            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
         }
 
-        .school-box p {
-            margin: 5px 0;
-            line-height: 1.5;
+        .school-box p, .school-box ul {
+            margin: 10px 0;
+            line-height: 1.6;
         }
 
         .school-box ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        /* Responsive styling */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            .school-box {
-                padding: 10px;
-            }
-
-            .school-box h2 {
-                font-size: 1.1em;
-            }
-
-            .school-box p {
-                font-size: 0.9em;
-            }
-
-            .back-arrow {
-                padding: 4px 8px;
-            }
-
-            .back-arrow img {
-                width: 14px;
-                height: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.2em;
-            }
-
-            .school-box {
-                padding: 8px;
-            }
-
-            .school-box p {
-                font-size: 0.8em;
-            }
-
-            .back-arrow img {
-                width: 12px;
-                height: 12px;
-            }
+            padding-left: 25px;
         }
     </style>
 </head>
 <body>
+    <div class="discontinuation-notice">
+        <p><strong>IMPORTANT NOTICE:</strong> This project has been discontinued. It was created to help connect people after the war in Lebanon by offering food, shelter, and other essential services. The information on this site is preserved for historical purposes but may no longer be current.</p>
+        <p><strong>إشعار هام:</strong> تم إيقاف هذا المشروع. تم إنشاؤه للمساعدة في ربط الناس بعد الحرب في لبنان من خلال تقديم الغذاء والمأوى والخدمات الأساسية الأخرى. تم الاحتفاظ بالمعلومات الموجودة على هذا الموقع لأغراض تاريخية ولكنها قد لا تكون حديثة.</p>
+    </div>
+
     <header>
         <button class="back-arrow" onclick="window.location.href='index.html'">
             <img src="https://img.icons8.com/ios-filled/50/000000/left.png" alt="Back">
@@ -179,8 +82,9 @@
     </div>
 
     <div class="school-box">
-        <h2>The Al-Danaf Charitable Association and the Baal-Shamiya School are ready to receive our southern people among their families, honored and strengthened
-            You are the people of the house and we are your guests. Contact: Rashid Al-Danaf 70 229 288 </h2>
+        <h2>The Al-Danaf Charitable Association and the Baal-Shamiya School</h2>
+        <p>Ready to receive our southern people among their families, honored and strengthened. You are the people of the house and we are your guests.</p>
+        <p><strong>Contact:</strong> Rashid Al-Danaf 70 229 288</p>
     </div>
 
     <div class="school-box">
@@ -261,6 +165,11 @@
             <li>Mina Hotel Institute Tripoli Official / معهد فندق الميناء طرابلس الرسمي</li>
         </ul>
     </div>
+
+    <footer>
+        <p>Website Built by @Sarah Rashidi. In case of any issues or if you'd like to volunteer and help add information to the website, don't hesitate to reach out.</p>
+        <p>Contact us on LinkedIn <a href="https://www.linkedin.com/in/sarahelrashidi/" target="_blank">Sarah Rashidi</a></p>
+        <p>© 2024 All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
