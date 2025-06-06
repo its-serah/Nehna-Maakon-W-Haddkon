@@ -43,28 +43,10 @@
         <button onclick="window.open('https://forms.gle/8N71FG5Uff7JJbYs9', '_blank')">Add Information to the Website / إضافة معلومات إلى الموقع</button>
     </div>
 
-    <div class="content-box" id="visit-counter-box">
-        <h2>Site Visits | زيارات الموقع</h2>
-        <p>Total visits: <span id="counter">0</span></p>
-    </div>
-
     <footer>
         <p>This humanitarian website was built to support displaced Lebanese civilians during conflict. Built by @Sarah Rashidi.</p>
         <p>Contact us on LinkedIn <a href="https://www.linkedin.com/in/sarahelrashidi/" target="_blank">Sarah Rashidi</a></p>
         <p>© 2024 All rights reserved.</p>
     </footer>
-
-    <script>
-        // Fix the counter functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            if (localStorage.getItem('page_view')) {
-                localStorage.setItem('page_view', Number(localStorage.getItem('page_view')) + 1);
-            } else {
-                localStorage.setItem('page_view', 1);
-            }
-
-            document.getElementById('counter').textContent = localStorage.getItem('page_view');
-        });
-    </script>
 </body>
 </html>

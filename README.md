@@ -6,6 +6,10 @@
 
 **IMPORTANT NOTICE:** This project has been discontinued. It was created to help connect people after the war in Lebanon by offering food, shelter, and other essential services. The information on this site is preserved for historical purposes but may no longer be current.
 
+## Live Demo
+
+Visit the live website: [https://nehna-maakon-w-haddkon.netlify.app](https://nehna-maakon-w-haddkon.netlify.app)
+
 ## Purpose
 
 During the humanitarian crisis caused by the conflict in Lebanon, thousands of families were displaced from their homes, creating an urgent need for shelter, food, medical care, and basic necessities. This platform was developed to:
@@ -19,7 +23,7 @@ During the humanitarian crisis caused by the conflict in Lebanon, thousands of f
 ## Website Sections
 
 ### Home Page (index.html)
-The main landing page provides an overview of the platform's purpose and navigational buttons to all resource sections. It includes a counter tracking site visits and a form link for adding new information.
+The main landing page provides an overview of the platform's purpose and navigational buttons to all resource sections. It includes a form link for adding new information to the platform.
 
 ### Health Support (health.html)
 This section contains information about:
@@ -59,7 +63,6 @@ The website is built using HTML, CSS, and JavaScript. It features:
 - Bilingual content in both English and Arabic
 - Mobile-responsive design
 - Simple navigation system
-- Visit counter functionality
 
 ## How to Contribute
 
